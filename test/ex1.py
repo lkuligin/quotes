@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 # coding: utf8
+"""
+Count the number of lines for each file. Files are ~0.5Gb each.
+"""
 import traceback
 import os
 import csv
 import pandas as pd
+#path to directory with files, files are big: ~0.5Gb each
 PATH = "C:/Users/kuligin/Documents/git/lkuligin/test/"
 
 def count_lines(path):
@@ -17,6 +21,7 @@ def count_lines(path):
 		print "count lines error", traceback.format_exc()
 
 if __name__ == "__main__":
+#names of file to be analyzed
 	files = ["bookings.csv", "searches.csv"]
 	print "ex1"
 	for file in files:
