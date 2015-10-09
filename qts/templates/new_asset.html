@@ -1,0 +1,13 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+{% block content %}
+<h1>Let's add new asset! Please enter all details:</h1>
+<form action="" method="post" name="new asset">
+{{form.hidden_tag()}}
+<h3>Enter asset's properties please:</h3>
+<p>Asset's name: {{form.name(size=30)}}</p>
+<p>Ticket at the exchange: {{form.symb}}</p>
+<p>Source for the quotes (yahoo, ) {{form.source}}</p>
+<p><input type="submit" value="Add"></p>
+</form>
+{% endblock %}
