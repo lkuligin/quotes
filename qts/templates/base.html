@@ -1,0 +1,22 @@
+<html>
+<head>
+{% if title %}
+<title>{{title}}</title>
+{% else %}
+<title>Курсы акций-облигаций</title>
+{% endif %}
+</head>
+<body>
+<div><b>Quotes:</b> <a href="/index">Today</a> <a href="/historical">Historical</a>  
+<b>Control:</b> <a href="/new_asset">Add asset</a></div>
+<hr>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<i>{{ message }}</i><br>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+</body>
+</html>
